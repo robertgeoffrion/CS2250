@@ -24,28 +24,29 @@ int Failures(){
 int numGrades, failures=0;
 double total=0, average;
 
-printf("How many grades do you want to input?");
+printf("How many grades do you want to input? ");
 scanf("%d", &numGrades);
-double grades[numGrades + 1];
+double grade = 0;
     for (int i = 1; i <= numGrades; ++i){
-        printf("Enter grade #%d", i);
-        scanf("%lf", grades[i]);
-        total = total + grades[i];
-        if(grades[i] < 65){
-            failures = failures +1;
-        }
+        printf("Enter grade #%d: ", i);
+        scanf("%lf", &grade);
+        total = total + grade;
+        if(grade < 65){ // assuming that a 65 is not a failing grade
+            failures = failures +1; // only grades less than 65
+        }                           // are failing grades
         else{
             failures = failures;
         }
     }
     average = total / numGrades;
-    printf("Average = %lf\n", average);
+    printf("Average = %.2lf\n", average);
     return failures;
 }
 // Main Function
 int main()
 {
     
+    printf("Number of Failures = %d\n", Failures());
     return 0;
 }
 // Function Definitions

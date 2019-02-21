@@ -43,16 +43,17 @@ int IsLeap(int year){
 //eMain Function
 int main()
 {
-    int year = 0;
-    printf("Enter the year: \n");
-    scanf("%d", &year);
+    
+    printf("Finding the leap years between 2000 and 2019\n");
+
 
     //IsLeap(year);
-    if (IsLeap(year) == 1){
-        printf("The year %d is a leap year! (has 366 days)\n", year);
+    for (int i = 2000; i <= 2019; ++i){
+    if (IsLeap(i) == 1){
+        printf("The year %d is a leap year!\n", i);
     }
     else{
-        printf("The year %d is not a leap year (has 365 days)\n", year);
+    }
     }
     return 0;
 }
