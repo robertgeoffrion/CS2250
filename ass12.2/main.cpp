@@ -37,11 +37,11 @@ int main(){
 
     cout << "Enter customer's name:" << endl;
     getline(cin, custName);
-    cin.ignore();
+    //cin.ignore();
 
     cout << "Enter today's date:" << endl;
     getline(cin, today);
-    cin.ignore();
+    //cin.ignore();
     cout << endl;
 
     cout << "Customer name: " << custName << endl;

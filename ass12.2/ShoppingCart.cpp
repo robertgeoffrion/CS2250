@@ -109,7 +109,13 @@ void ShoppingCart::ModifyItems(ItemToPurchase item){
 
 }
 int ShoppingCart::GetNumItemsInCart(){
-return sizeof(cartItems)-1;
+    unsigned i;
+    int numItems =0;
+    for(i =0; i< cartItems.size(); i++){
+        numItems += cartItems[i].GetQuantity();
+    }
+
+    return numItems;
 }
 double ShoppingCart::GetCostOfCart(){
     unsigned i =0;
